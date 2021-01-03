@@ -3,7 +3,8 @@ from time import sleep
 import time
 motorpin_left = 37
 motorpin_right = 35
-relay_1 = 3 #Définit le numéro du port GPIO qui alimente la relay_1
+#pins defined for 8-relays
+relay_1 = 3 
 relay_2 = 5
 relay_3 = 7
 relay_4 = 11
@@ -14,7 +15,8 @@ relay_8 = 18
 # PWM pin connected to LED
 GPIO.setwarnings(False)         #disable warnings
 GPIO.setmode(GPIO.BOARD)
-GPIO.setup(relay_1,GPIO.OUT)
+#relay outpin-set
+GPIO.setup(relay_1,GPIO.OUT)   
 GPIO.setup(relay_2,GPIO.OUT)
 GPIO.setup(relay_3, GPIO.OUT)
 GPIO.setup(relay_4, GPIO.OUT)
@@ -34,6 +36,7 @@ stop_speed=0
 
 def forward():
     print("forward")
+    #NC relay triggers on LOW
     GPIO.output(relay_1, GPIO.LOW)
     GPIO.output(relay_2, GPIO.LOW)
     GPIO.output(relay_3, GPIO.LOW)
