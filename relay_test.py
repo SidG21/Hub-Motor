@@ -4,7 +4,7 @@ import time
 GPIO.setmode(GPIO.BOARD) #Définit le mode de numérotation (Board)
 GPIO.setwarnings(False) #On désactive les messages d'alerte
 
-relay_1 = 3 #Définit le numéro du port GPIO qui alimente la relay_1
+relay_1 = 3 #pins defined for 8 relays
 relay_2 = 5
 relay_3 = 7
 relay_4 = 11
